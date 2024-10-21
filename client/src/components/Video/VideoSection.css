@@ -1,0 +1,41 @@
+.video-section {
+  padding: 20px; /* Adjust as needed */
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the video cards horizontally */
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 300px; /* Set a fixed width for the video cards */
+}
+
+.video-section h2 {
+  text-align: center; /* Center the text */
+  font-family: 'Arial', sans-serif; /* Change to a desired font */
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #2980b9; /* Change text color */
+  margin-bottom: 30px;
+  margin-top: 40px; /* Space below the title */
+}
+
+.curve-container {
+  position: relative;
+  height: 200px;
+  margin: 0; /* Adjust height as needed */
+}
+
+.circle {
+  width: 30px; /* Circle size */
+  height: 30px; /* Circle size */
+  background-color: #eb4d0f; /* Updated circle color to a blue shade */
+  border-radius: 50%; /* Make it circular */
+  position: absolute;
+  transition: top 0.2s ease; /* Smooth transition for movement */
+}

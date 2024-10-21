@@ -1,0 +1,63 @@
+.heroes-section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding around the section */
+    background-color: #fff; /* Ensure a white background */
+  }
+  
+  .scroll-container {
+    overflow: hidden; /* Hide the scrollbar */
+    position: relative; /* Positioning for animation */
+    height: 400px; /* Set the height for scrolling */
+    width: 100%; /* Make it responsive */
+  }
+  
+  .heroes-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    animation: scroll 20s linear infinite; /* Animation for scrolling */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0); /* Start position */
+    }
+    100% {
+      transform: translateY(-100%); /* End position */
+    }
+  }
+  
+  .hero-item {
+    margin: 20px; /* Margin around each hero item */
+    text-align: center; /* Center text */
+    flex-shrink: 0; /* Prevent items from shrinking */
+  }
+  
+  .hero-image {
+    border-radius: 10px; /* Add rounded corners to images */
+    width: 150px; /* Fixed width for images */
+    height: 150px; /* Fixed height for images */
+  }
+  
+  .dog-name {
+    font-weight: bold; /* Make dog names bold */
+    margin: 10px 0; /* Space around names */
+  }
+  
+  .dog-description {
+    font-size: 0.9rem; /* Smaller font for descriptions */
+    color: #666; /* Grey color for descriptions */
+  }
+  
+  /* Style for the thank you message */
+  .thank-you-message {
+    margin-top: 10px; /* Space above the thank you message */
+    font-size: 2.5rem;
+    font-size: 1.2rem; /* Font size for thank you message */
+    color: #2980b9;
+    font-family: 'Roboto', sans-serif; /* Color for thank you message */
+  }
+  

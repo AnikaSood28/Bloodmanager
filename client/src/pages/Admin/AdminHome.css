@@ -1,0 +1,72 @@
+.admin-home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 20px; /* Reduced margin to move content closer to sidebar */
+    max-width: calc(100% - 280px); /* Adjusted to account for sidebar width + new margin */
+  }
+  
+  .welcome-section {
+    margin-bottom: 20px;
+  }
+  
+  .welcome-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .admin-name {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 20px;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .main-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .key-features {
+    margin-top: 20px;
+  }
+  
+  .key-features h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .key-features ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .key-features li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .key-features li::before {
+    content: "•";
+    color: #0066cc;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }

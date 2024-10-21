@@ -1,15 +1,19 @@
 const inventoryModel = require("../models/inventoryModel");
 const mongoose = require("mongoose");
-//GET BLOOD DATA
+
+// GET DOG BLOOD DATA
 const bloodGroupDetailsContoller = async (req, res) => {
   try {
-    const bloodGroups = ["O+", "O-", "AB+", "AB-", "A+", "A-", "B+", "B-"];
+    // Updated blood groups for dog blood types
+    const bloodGroups =["DEA 1.1", "DEA 1.2", "DEA 3", "DEA 4", "DEA 5", "DEA 7"];
+
     const bloodGroupData = [];
     const organisation = new mongoose.Types.ObjectId(req.body.userId);
-    //get single blood group
+
+    // Get single blood group data
     await Promise.all(
       bloodGroups.map(async (bloodGroup) => {
-        //COunt TOTAL IN
+        // Count TOTAL IN
         const totalIn = await inventoryModel.aggregate([
           {
             $match: {
@@ -25,7 +29,8 @@ const bloodGroupDetailsContoller = async (req, res) => {
             },
           },
         ]);
-        //COunt TOTAL OUT
+        
+        // Count TOTAL OUT
         const totalOut = await inventoryModel.aggregate([
           {
             $match: {
@@ -41,11 +46,12 @@ const bloodGroupDetailsContoller = async (req, res) => {
             },
           },
         ]);
-        //CALCULATE TOTAL
+
+        // Calculate AVAILABLE BLOOD
         const availabeBlood =
           (totalIn[0]?.total || 0) - (totalOut[0]?.total || 0);
 
-        //PUSH DATA
+        // PUSH DATA
         bloodGroupData.push({
           bloodGroup,
           totalIn: totalIn[0]?.total || 0,

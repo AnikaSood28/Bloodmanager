@@ -1,0 +1,161 @@
+.health-tracking {
+    padding: 40px;
+    background: #ffff;
+    position: relative;
+    margin: 50px;
+   
+    /* Add padding for border spacing */
+    overflow-y: auto; 
+    padding: 50px;
+  }
+  
+  .tracking-container {
+    display: flex;
+    justify-content: space-between;  /* Ensure space between text and images */
+    align-items: center;
+    position: relative;
+    padding: 0 30px; /* Add horizontal padding for extra space on sides */
+  }
+  
+  .tracking-info {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    z-index: 1;
+    padding-right: 20px; /* Space between text and images */
+  }
+  
+  .tracking-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .tracking-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .track-now-button {
+    background-color: #ff6b6b; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .track-now-button:hover {
+    background-color: #ff4f4f;
+  }
+  
+  /* Right Side: Images */
+  .tracking-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1;
+    /* Add margin for white space on the right */
+    margin-right: 30px; /* This leaves space between the images and the border */
+  }
+  
+  .tracking-images img {
+    width: 150px;  /* Adjust the size to fit neatly */
+    height: auto;
+    border-radius: 10px;  /* Rounded corners */
+  }
+  
+  /* Background Lines */
+  .health-tracking::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 20%, #f7f2f2 40%, transparent 60%);
+    z-index: 0;
+  }
+  
+  .health-tracking::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at left, #2bb4f4 0%, transparent 20%, transparent 100%);
+    z-index: 0;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .tracking-container {
+      flex-direction: column; /* Stack content vertically on small screens */
+      padding: 0 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .tracking-info {
+      padding-right: 0; /* Remove right padding on small screens */
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .tracking-info h2 {
+      font-size: 1.5rem; /* Decrease font size for smaller screens */
+    }
+  
+    .tracking-info p {
+      font-size: 1rem; /* Adjust paragraph font size */
+    }
+  
+    .track-now-button {
+      font-size: 1rem; /* Adjust button size */
+      padding: 8px 16px;
+    }
+  
+    .tracking-images {
+      flex-direction: row; /* Arrange images in a row on small screens */
+      justify-content: center; /* Center the images */
+      margin-right: 0; /* Remove right margin */
+      gap: 10px; /* Reduce gap between images */
+    }
+  
+    .tracking-images img {
+      width: 120px; /* Adjust image size */
+    }
+  
+    .health-tracking {
+      padding: 30px; /* Reduce overall padding for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tracking-info h2 {
+      font-size: 1.3rem; /* Further decrease font size */
+    }
+  
+    .tracking-info p {
+      font-size: 0.9rem;
+    }
+  
+    .track-now-button {
+      font-size: 0.9rem; /* Adjust button size for mobile */
+      padding: 7px 14px;
+    }
+  
+    .tracking-images img {
+      width: 100px; /* Make images even smaller on very small screens */
+    }
+  
+    .tracking-container {
+      padding: 0 10px; /* Reduce padding more for very small devices */
+    }
+  
+    .health-tracking {
+      padding: 20px; /* Further reduce padding */
+    }
+  }
+  

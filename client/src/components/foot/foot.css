@@ -1,0 +1,38 @@
+/* Footer.css */
+.footer {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center align text */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    position: relative; /* Position relative for stacking context */
+    bottom: 0; /* Align to bottom of page */
+    width: 100%; /* Full width */
+  }
+  
+  .footer-content {
+    max-width: 800px; /* Max width for content */
+    margin: auto; /* Center content */
+  }
+  
+  .social-icons {
+    margin-top: 10px; /* Space above icons */
+  }
+  
+  .social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: #333; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem; /* Icon size */
+  }
+  
+  .social-icons a:hover {
+    color: #FFD700; /* Color on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 576px) {
+    .footer-content p {
+      font-size: 0.9rem; /* Smaller text on mobile */
+    }
+  }
+  

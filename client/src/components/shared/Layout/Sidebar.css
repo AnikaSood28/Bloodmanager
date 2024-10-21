@@ -1,0 +1,84 @@
+/* Layout.css */
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #007bff; /* Set the sidebar background color to blue */
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-item.active,
+  .menu-item:hover {
+    background-color: #0056b3; /* Darker blue on hover and active state */
+  }
+  
+  .menu-item i {
+    margin-right: 10px;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    /* For small screens */
+    .sidebar {
+      width: 100%; /* Sidebar takes full width on smaller screens */
+      height: auto;
+      position: relative;
+      padding: 10px;
+    }
+    
+    .menu {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-around;
+    }
+  
+    .menu-item {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    .menu-item i {
+      display: none; /* Hide icons for smaller screens */
+    }
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 480px) {
+    .menu-item {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  

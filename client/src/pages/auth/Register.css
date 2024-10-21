@@ -1,0 +1,139 @@
+.register-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; /* Limit the max width of the page */
+    margin: 0 auto; /* Center the page */
+    position: relative; /* Enable positioning for children */
+}
+
+.header {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align items to the start */
+    width: 100%;
+    max-width: 1000px; /* Limit max width for the container */
+    position: relative; /* Relative positioning for container */
+}
+
+.image-container {
+    position: relative; /* Relative positioning for child elements */
+    width: 300px; /* Set a fixed width for the image container */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Space around the image container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgb(43, 114, 138); /* Light blue background for image container */
+    display: flex;
+    align-items: flex-start; /* Align content to the start */
+    justify-content: center; /* Center content horizontally */
+}
+
+.dog-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    animation: fadeIn 0.5s ease-in-out; /* Add animation */
+}
+
+.curved-line {
+    position: absolute; /* Position the curved line absolutely */
+    top: 90px; /* Adjust the top position below the image */
+    left: -50px; /* Shift to the left to start from image edge */
+    width: calc(100% + 100px); /* Full width of the image container */
+    height: 100px; /* Adjust height for curve */
+    border-radius: 50%; /* Make it a curve */
+    background: linear-gradient(to right, rgb(159, 45, 83) 30%, transparent 30%, transparent 100%); /* Create gradient for curve */
+    overflow: hidden; /* Hide overflow */
+}
+
+.circle {
+    position: absolute; /* Position the circle absolutely */
+    top: 10px; /* Position it along the curve */
+    left: 50%; /* Center it horizontally on the curve */
+    width: 20px; /* Circle width */
+    height: 20px; /* Circle height */
+    border-radius: 50%; /* Make it a circle */
+    background-color: rgb(109, 187, 213); /* Same as image container */
+    transform: translateX(-50%); /* Center the circle on the curved line */
+    animation: moveAlongCurve 5s linear infinite; /* Animate movement along the curve */
+}
+
+@keyframes moveAlongCurve {
+    0% {
+        left: 0%;
+        top: 10px; /* Adjust for the starting position of the curve */
+    }
+    50% {
+        left: 100%; /* Move to the end of the line */
+        top: -30px; /* Adjust for the peak of the curve */
+    }
+    100% {
+        left: 0%; /* Return to the starting position */
+        top: 10px; /* Adjust for the starting position of the curve */
+    }
+}
+
+.form-wrapper {
+    flex: 1; /* Take equal space */
+    padding: 20px; /* Space around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center; /* Center content vertically */
+    background-color: white; /* White background for the form */
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px; /* Space above the error message */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+
+    .image-container,
+    .form-wrapper {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Add hover effect to buttons */
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
