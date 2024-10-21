@@ -29,10 +29,16 @@ npm install
 Run the app in development mode:
 arduino
 npm run dev
+
 Scripts
+
 npm run server: Runs the backend server using nodemon.
+
 npm run client: Starts the React client.
+
 npm run build: Builds the React application for production.
+
 npm run dev: Concurrently runs both server and client.
+
 License
 This project is licensed under the ISC License.
